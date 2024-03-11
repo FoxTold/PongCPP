@@ -4,7 +4,7 @@
 
 #ifndef PONG_PLAYER_H
 #define PONG_PLAYER_H
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 class Player{
 public:
     Player(float x, float y): x(x), y(y){

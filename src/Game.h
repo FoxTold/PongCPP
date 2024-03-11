@@ -4,7 +4,7 @@
 
 #ifndef PONG_GAME_H
 #define PONG_GAME_H
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 #include "Player.h"
 #include "Utils.h"
 #include "Enemy.h"
@@ -12,7 +12,13 @@
 class Game{
 public:
     Game() : _window(sf::RenderWindow{ { 400, 300 }, _title }){
-        _font.loadFromFile("/Library/Fonts/Arial Unicode.ttf");
+	#ifdef APPLE
+	        _font.loadFromFile("/Library/Fonts/Arial Unicode.ttf");
+	#endif
+	#ifdef WIN32
+            _font.loadFromFile("C:\\Windows\\Fonts\\arial.ttf");
+#endif
+
         _scoreboard.setFont(_font);
     };
     Game(Game&) = delete;
