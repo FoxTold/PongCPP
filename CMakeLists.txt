@@ -13,6 +13,8 @@ add_executable(${project_name}
         src/Player.cpp
         src/Player.h
         src/Utils.h
+        src/Enemy.cpp
+        src/Enemy.h
 )
 
 target_link_libraries(${project_name} PRIVATE sfml-graphics fmt::fmt)

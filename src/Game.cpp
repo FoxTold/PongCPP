@@ -13,6 +13,7 @@ void Game::start() {
         }
         render();
         _player.update();
+        _enemy.update();
     }
 }
 
@@ -20,6 +21,7 @@ void Game::render() {
 
     _window.clear();
     _player.draw(_window);
+    _enemy.draw(_window);
     drawUI();
     _window.display();
 

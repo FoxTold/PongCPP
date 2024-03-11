@@ -7,6 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "Player.h"
 #include "Utils.h"
+#include "Enemy.h"
 
 class Game{
 public:
@@ -29,6 +30,7 @@ private:
     sf::RenderWindow _window;
 
     Player _player{0,0};
+    Enemy _enemy {300,0};
     sf::Font _font;
     sf::Text _scoreboard;
 };
