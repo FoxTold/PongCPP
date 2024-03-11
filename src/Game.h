@@ -12,7 +12,7 @@
 class Game{
 public:
     Game() : _window(sf::RenderWindow{ { 400, 300 }, _title }){
-	#ifdef APPLE
+	#ifdef TARGET_OS_MAC
 	        _font.loadFromFile("/Library/Fonts/Arial Unicode.ttf");
 	#endif
 	#ifdef WIN32
